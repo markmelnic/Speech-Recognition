@@ -1,3 +1,4 @@
+
 import speech_recognition as sr
 from pydub import AudioSegment
 from pydub.utils import make_chunks
@@ -29,15 +30,11 @@ for i, chunk in enumerate(chunks):
             r.adjust_for_ambient_noise(source)
             audio_listened = r.listen(source)
         while True:
-            try:
-                rec = r.recognize_google(audio_listened)
-                rct.write(rec + " ")
-                print (rec + " ")
-                break
-            except Exception as e:
-                print(e)
-                None
-                #rec = r.recognize_google(audio_listened, show_all=True)
-                #rct.write(rec + " ")
-                #print(rec,type(rec))
-    rct.close()
+            rec = r.recognize_google(audio_listened)
+            rct.write(rec + " ")
+            print (rec + " ")
+            break
+            None
+            #rec = r.recognize_google(audio_listened, show_all=True)
+            #rct.write(rec + " ")
+            #print(rec,type(rec))
