@@ -34,7 +34,6 @@ for i, chunk in enumerate(chunks):
             rct.write(rec + " ")
             print (rec + " ")
             break
-            None
             #rec = r.recognize_google(audio_listened, show_all=True)
             #rct.write(rec + " ")
             #print(rec,type(rec))
